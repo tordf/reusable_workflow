@@ -7,4 +7,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: /.github/workflows/workflow-b.yml
+    uses: tordf/reusable_workflow/.github/workflows/workflow-b.yml@main
