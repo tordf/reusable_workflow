@@ -1,0 +1,19 @@
+name: Reusable workflow example
+
+on:
+  workflow_call:
+    inputs:
+      runs-on:
+        description: Platform to execute on
+        required: false
+        type: string
+        default: ubuntu-latest
+  
+
+jobs:
+  example_job:
+    name: Pass input and secrets to my-action
+    runs-on: ${{ inputs.runs-on }}
+    steps:
+      - name: hello
+        run: echo "hello"
