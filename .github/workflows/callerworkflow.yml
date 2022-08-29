@@ -1,10 +1,10 @@
 name: Call a reusable workflow
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
   call-workflow:
-    uses: /.github/workflows/workflow-b.yml
+    uses: tordf/reusable_workflow/.github/workflows/workflow-b.yml@main
